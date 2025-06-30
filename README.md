@@ -5,8 +5,6 @@ Developed my personal portfolio website and hosted it on GitHub Pages. The websi
 
 ![image](https://github.com/user-attachments/assets/3f834b9e-c837-4f1d-90a3-7386db11eac5)
 
-
-
 <h1 align="center">Hi 👋, I'm Shreya Mahalle</h1>
 <h3 align="center">A passionate Software Developer | Java | Spring Boot | Full Stack Developer</h3>
 
