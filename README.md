@@ -9,10 +9,6 @@ Developed my personal portfolio website and hosted it on GitHub Pages. The websi
 <h1 align="center">Hi 👋, I'm Shreya Mahalle</h1>
 <h3 align="center">A passionate Software Developer | Java | Spring Boot | Full Stack Developer</h3>
 
-<p align="center">
-  <img src="https://avatars.githubusercontent.com/u/131266011?v=4" alt="Shreya Mahalle" width="200" style="border-radius:50%">
-</p>
-
 ---
 
 - 🌱 I’m currently learning **Microservices, Spring Cloud, and System Design**
@@ -35,12 +31,6 @@ Developed my personal portfolio website and hosted it on GitHub Pages. The websi
 - **Tools:** Git, GitHub, Maven  
 
 ---
-
-### 📈 GitHub Stats:
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=shreyamahalle&show_icons=true&theme=radical" alt="shreyamahalle Stats" />
-</p>
 
 ---
 
