@@ -11,18 +11,61 @@
             color: #fff;
             margin: 0;
             padding: 0;
+            scroll-behavior: smooth;
+        }
+        nav {
+            background-color: #111;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #00ccff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
         }
         header {
-            background-color: #111;
+            padding-top: 70px;
             text-align: center;
-            padding: 40px 20px;
+            padding-bottom: 30px;
         }
-        header h1 {
-            margin: 0;
+        .typing {
+            font-size: 24px;
             color: #00ffcc;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid #00ffcc;
+            animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
         }
-        header p {
-            color: #ccc;
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink {
+            from, to { border-color: transparent; }
+            50% { border-color: #00ffcc; }
+        }
+        .profile-pic {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 3px solid #00ffcc;
+            object-fit: cover;
+            margin-bottom: 10px;
         }
         section {
             max-width: 1000px;
@@ -35,6 +78,13 @@
             padding: 20px;
             margin-bottom: 20px;
             box-shadow: 0 2px 8px rgba(0, 255, 204, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .section-box.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
         h2 {
             color: #00ffcc;
@@ -51,6 +101,12 @@
         a:hover {
             text-decoration: underline;
         }
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
         footer {
             background-color: #111;
             color: #999;
@@ -62,48 +118,77 @@
 </head>
 <body>
 
+<!-- Navigation Menu -->
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
 <header>
-    <h1>Shreya Mahalle</h1>
-    <p>Software Developer | Java | Spring Boot | Full Stack Developer</p>
+    <img src="https://avatars.githubusercontent.com/u/131266011?v=4" alt="Shreya Mahalle" class="profile-pic">
+    <h1 class="typing">Hi, I'm Shreya Mahalle - Software Developer</h1>
+    <div class="social-icons">
+        <a href="https://github.com/shreyamahalle" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/shreya-mahalle-254657176/" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+        </a>
+        <a href="https://www.instagram.com/shreyamahalle/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
+        <a href="https://x.com/shreyamahalle" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023.svg" alt="X">
+        </a>
+        <a href="https://www.facebook.com/shreyamahalle1/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook">
+        </a>
+    </div>
 </header>
 
 <section>
 
-    <div class="section-box">
+    <div class="section-box" id="about">
         <h2>About Me</h2>
-        <p>I am a passionate Software Developer with expertise in Java, Spring Boot, MySQL, HTML, CSS, and full stack development. I love building real-world projects and learning new technologies.</p>
+        <p>I am a passionate Software Developer with expertise in Java, Spring Boot, MySQL, HTML, CSS, and Full Stack Development. I enjoy building real-time scalable applications and learning new technologies.</p>
     </div>
 
-    <div class="section-box">
+    <div class="section-box" id="skills">
         <h2>Skills</h2>
         <ul>
             <li>Java, Spring, Spring Boot</li>
             <li>MySQL, JDBC, Hibernate</li>
             <li>HTML, CSS, JavaScript</li>
             <li>REST APIs, Maven</li>
-            <li>Version Control: Git, GitHub</li>
+            <li>Git, GitHub</li>
         </ul>
     </div>
 
-    <div class="section-box">
+    <div class="section-box" id="projects">
         <h2>Projects</h2>
         <ul>
             <li><strong>Foodease - Food Order Booking System</strong></li>
             <li><strong>Student Management REST API</strong></li>
             <li><strong>Employee Timesheet & Task Management System</strong></li>
         </ul>
-        <p>See more on my <a href="https://github.com/shreyamahalle" target="_blank">GitHub Profile</a>.</p>
+        <p>More projects on <a href="https://github.com/shreyamahalle" target="_blank">GitHub</a>.</p>
     </div>
 
-    <div class="section-box">
+    <div class="section-box" id="education">
         <h2>Education</h2>
         <ul>
             <li>Bachelor of Engineering - Computer Science Engineering</li>
-
         </ul>
     </div>
 
-    <div class="section-box">
+    <div class="section-box" id="certifications">
         <h2>Certifications</h2>
         <ul>
             <li>Java Programming Certification</li>
@@ -112,19 +197,19 @@
         </ul>
     </div>
 
-    <div class="section-box">
+    <div class="section-box" id="resume">
         <h2>Resume</h2>
-        <p>Download my Resume: <a href="(https://drive.google.com/file/d/1UTueDGJnSO87wNbUubMNP1L53JAokO6l/view?usp=drivesdk)" target="_blank">Click Here</a></p>
+        <p>Download my Resume: <a href="https://drive.google.com/file/d/1UTueDGJnSO87wNbUubMNP1L53JAokO6l/view?usp=drivesdk" target="_blank">Click Here</a></p>
     </div>
 
-    <div class="section-box">
+    <div class="section-box" id="contact">
         <h2>Contact</h2>
         <p>Email: shreyaamahalle@gmail.com</p>
         <p>GitHub: <a href="https://github.com/shreyamahalle" target="_blank">https://github.com/shreyamahalle</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/shreya-mahalle-254657176/" target="_blank">LinkedIn Profile</a></p>
-        <p>Instagram: <a href="https://www.instagram.com/shreyamahalle/" target="_blank">Instagram Profile</a></p>
-        <p>Twitter: <a href="https://x.com/shreyamahalle" target="_blank">Twitter Profile</a></p>
-        <p>Facebook: <a href="https://www.facebook.com/shreyamahalle1/?_rdr" target="_blank">Facebook Profile</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/shreya-mahalle-254657176/" target="_blank">LinkedIn</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/shreyamahalle/" target="_blank">Instagram</a></p>
+        <p>Twitter: <a href="https://x.com/shreyamahalle" target="_blank">X (Twitter)</a></p>
+        <p>Facebook: <a href="https://www.facebook.com/shreyamahalle1/" target="_blank">Facebook</a></p>
     </div>
 
 </section>
@@ -132,6 +217,20 @@
 <footer>
     <p>&copy; 2025 Shreya Mahalle | All Rights Reserved</p>
 </footer>
+
+<!-- Scroll Animation Script -->
+<script>
+    const boxes = document.querySelectorAll('.section-box');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    boxes.forEach(box => observer.observe(box));
+</script>
 
 </body>
 </html>
