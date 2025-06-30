@@ -7,5 +7,4 @@ Developed my personal portfolio website and hosted it on GitHub Pages. The websi
 
 Open sourced under the [MIT license](LICENSE.md).
 
-<3
 
