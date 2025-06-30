@@ -7,7 +7,6 @@ Developed my personal portfolio website and hosted it on GitHub Pages. The websi
 
 
 
-
 <h1 align="center">Hi 👋, I'm Shreya Mahalle</h1>
 <h3 align="center">A passionate Software Developer | Java | Spring Boot | Full Stack Developer</h3>
 
