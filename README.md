@@ -1,4 +1,6 @@
 # shreyamahalle.github.io
+https://shreyamahalle.github.io/
+
 Developed my personal portfolio website and hosted it on GitHub Pages. The website is built using HTML, CSS, and JavaScript, styled with a black theme, and includes animations, social links, and project showcases.
 
 ![image](https://github.com/user-attachments/assets/3f834b9e-c837-4f1d-90a3-7386db11eac5)
