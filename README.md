@@ -21,6 +21,7 @@ Developed my personal portfolio website and hosted it on GitHub Pages. The websi
 
 - 📫 How to reach me: **shreyaamahalle@gmail.com**
 
+
 ---
 
 ### 🛠️ Tech Stack:
